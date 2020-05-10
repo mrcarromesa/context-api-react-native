@@ -371,7 +371,7 @@ yarn add @react-native-community/async-storage
 pod install
 ```
 
-- Inicialmente vamos criar o arquivo `src/context/auth.js`
+- Inicialmente vamos criar o arquivo `src/contexts/auth.js`
 
 ```js
 // O que há de diferente é o `createContext` e `useContext`
@@ -527,7 +527,7 @@ import { AuthProvider } from '~/contexts/auth';
 ```js
 import React, { useContext } from 'react'; // Utilize o useContext
 import { Button, Text } from 'react-native';
-import { AuthContext } from '~/context/auth'; // Obtenha o context
+import { AuthContext } from '~/contexts/auth'; // Obtenha o context
 
 export default function Component() {
   const { user, signIn } = useContext(AuthContext); // Obtenha as props desejada do context que foi passado através do `<AuthContext.Provider value={{ signed: !!user, user, loading, signIn, signOut }} >`
